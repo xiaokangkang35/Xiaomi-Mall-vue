@@ -51,6 +51,4 @@ a,
 a:hover {
   text-decoration: none;
 }
-
-
 </style>

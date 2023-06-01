@@ -5,19 +5,45 @@
     router>
         <div class="logo">
             <router-link to="/">
-                <img src="../assets/images/header/mi-logo.png" alt />
+                <img src="../assets/images/header/mi-logo.png" />
             </router-link>
         </div>
+        <el-menu-item index="/">首页</el-menu-item>
+        <el-menu-item index="/test">全部商品</el-menu-item>
+        <el-menu-item index="/service">服务中心‘</el-menu-item>
+
+        <div class="search">
+            <el-input placeholder="请输入搜索内容">
+              <el-button slot="append" icon="el-icon-search"></el-button>
+            </el-input>
+          </div>
     </el-menu>
 </template>
 <style>
-
+.el-menu {
+  max-width: 1225px;
+  margin: 0 auto;
+}
+.logo img{
+  height: 60px;
+  width: 60px;
+  float: left;
+  margin: 0px 100px 20px 20px;
+}
+.search {
+  margin-top: 10px;
+  width: 300px;
+  float: right;
+}
 </style>
 <script>
     export default{
+        beforeUpdate() {
+            this.activeIndex = this.$route.path
+        },
         data() {
             return {
-                activeIndex: ''
+                activeIndex: '/'
             }
         }
     }
