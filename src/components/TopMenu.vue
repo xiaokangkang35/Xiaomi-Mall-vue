@@ -5,7 +5,7 @@
     router>
         <div class="logo">
             <router-link to="/">
-                <img src="../assets/images/header/mi-logo.png" />
+                <img src="../assets/images/logo/mi-logo.png" />
             </router-link>
         </div>
         <el-menu-item index="/">首页</el-menu-item>
@@ -28,7 +28,7 @@
   height: 60px;
   width: 60px;
   float: left;
-  margin: 0px 100px 20px 20px;
+  margin: 0px 154px 20px 20px;
 }
 .search {
   margin-top: 10px;

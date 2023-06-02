@@ -1,30 +1,22 @@
 <template>
   <div id="app">
-    <el-container>
-      <top-bar></top-bar>
-
-      <el-header>
+        <top-bar></top-bar>
         <top-menu></top-menu>
-      </el-header>
-
-      <el-main>
         <router-view></router-view>
-      </el-main>
-      
-      <el-footer>Footer</el-footer>
-    </el-container>
   </div>
 </template>
 
 <script>
 import TopBar from '@/components/TopBar'
 import TopMenu from '@/components/TopMenu'
+import MyList from '@/components/MyList'
 
 export default {
   name: 'App',
   components: {
     TopBar,
-    TopMenu
+    TopMenu,
+    MyList
   }
 }
 </script>
@@ -36,16 +28,6 @@ export default {
   margin: 0;
   border: 0;
   list-style: none;
-}
-#app .el-header {
-  padding: 0;
-}
-#app .el-main {
-  min-height: 300px;
-  padding: 20px 0;
-}
-#app .el-footer {
-  padding: 0;
 }
 a,
 a:hover {
