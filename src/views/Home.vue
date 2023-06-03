@@ -5,14 +5,14 @@
                 <!-- 轮播图 -->
                 <div class="carousel">
                     <el-carousel :interval="3000" height="460px" trigger="click">
-                        <el-carousel-item  v-for="(item,index) in carousel" :key="index">
+                        <el-carousel-item v-for="(item,index) in carousel" :key="index">
                             <img :src="item" alt="">
                         </el-carousel-item>
                     </el-carousel>
                 </div>
 
                 <div class="left_nav_bar">
-                    
+                    <ul></ul>
                 </div>
             </div>
 
@@ -52,7 +52,7 @@
                             </ul>
                         </div>
                         <div class="list">
-                            <MyList></MyList>
+                            <MyList :goodsList="phoneList"></MyList>
                         </div>
                     </div>
                 </div>
@@ -72,7 +72,7 @@
                             </ul>
                         </div>
                         <div class="list">
-                            <MyList></MyList>
+                            <MyList :goodsList="eleList"></MyList>
                         </div>
                     </div>
                 </div>
@@ -101,6 +101,61 @@ export default{
                 "https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/6dd2f3e0de4e6cbba98fd3799cfa5bf7.jpg?w=632&h=340",
                 "https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/0cf5e958bc88727b50c5c5fba7a8f47a.jpg?w=632&h=340"
             ],
+            phoneList: [
+                {
+                    goodsId: 1,
+                    imgUrl: "https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202305291422_e96776c7e1e35cebb454457c3344d3cd.png?thumb=1&w=200&h=200&f=webp&q=90",
+                    title: "Redmi Note 12T Pro",
+                    desc: "年代LCD屏幕之光",
+                    price: "1559",
+                    isDiscount: false
+                },
+                {
+                    goodsId: 2,
+                    imgUrl: "https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202305241112_ecb14876904f09f3cbc605350a02eff0.png?thumb=1&w=200&h=200&f=webp&q=90",
+                    title: "Xiaomi Civi 3",
+                    desc: "仿生双眸 天生出色",
+                    price: "2499",
+                    isDiscount: false
+                },
+                {
+                    goodsId: 3,
+                    imgUrl: "//cdn.cnbj1.fds.api.mi-img.com/mi-mall/555070388ddc76c4de4b2c42b12c3c1d.png?thumb=1&w=200&h=200&f=webp&q=90",
+                    title: "Xiaomi 13 Ultra",
+                    desc: "徕卡光学全焦段四摄| 一英寸可变光圈| 徕卡专业街拍模式",
+                    price: "5999",
+                    isDiscount: false
+                },
+                {
+                    goodsId: 4,
+                    imgUrl: "//cdn.cnbj1.fds.api.mi-img.com/mi-mall/8b046feca0a7bb3f7b961a9690babb1b.jpg?thumb=1&w=200&h=200&f=webp&q=90",
+                    title: "Redmi Note 12 Turbo",
+                    desc: "狂暴引擎 超强性能释放",
+                    price: "1899",
+                    oldPrice: "1999",
+                    isDiscount: true
+                },
+                {
+                    goodsId: 5,
+                    imgUrl: "//cdn.cnbj1.fds.api.mi-img.com/mi-mall/a6cec580260ceb20ae6a885c2c65c611.png?thumb=1&w=200&h=200&f=webp&q=90",
+                    title: "Redmi K60",
+                    desc: "骁龙8+｜2K 高光直屏｜5500mAh+67W闪充",
+                    price: "2299",
+                    oldPrice: "2699",
+                    isDiscount: true
+                },
+            ],
+            eleList: [
+                {
+                    goodsId: 1,
+                    imgUrl: "//cdn.cnbj1.fds.api.mi-img.com/mi-mall/82ff5ea76730fdf6f91aba5d3b2e5739.jpg?thumb=1&w=200&h=200&f=webp&q=90",
+                    title: "小米电视6 65” OLED",
+                    desc: "OLED自发光屏 | 百万级对比度 | 4.6mm超薄全面屏",
+                    price: "5999",
+                    oldPrice: "6999",
+                    isDiscount: true
+                },
+            ]
         };
     },
     components: { MyList }
