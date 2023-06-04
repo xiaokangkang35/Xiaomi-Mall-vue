@@ -10,9 +10,17 @@
                         </el-carousel-item>
                     </el-carousel>
                 </div>
-
                 <div class="left_nav_bar">
-                    <ul></ul>
+                    <ul>
+                        <li v-for="(item,index) in leftNav" :key="index">
+                            <router-link to>
+                                <div>
+                                    {{ item }}
+                                    <i class="el-icon-arrow-right"></i>
+                                </div>
+                            </router-link>
+                        </li>
+                    </ul>
                 </div>
             </div>
 
@@ -52,7 +60,11 @@
                             </ul>
                         </div>
                         <div class="list">
-                            <MyList :goodsList="phoneList"></MyList>
+                            <div class="goods-list-box">
+                                <ul class="goods-list">
+                                    <MyList :goodsList="phoneList"></MyList>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -72,19 +84,22 @@
                             </ul>
                         </div>
                         <div class="list">
-                            <MyList :goodsList="eleList"></MyList>
+                            <div class="goods-list-box">
+                                <ul class="goods-list">
+                                    <MyList :goodsList="eleList"></MyList>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div style="height: 200px;">
-
+            <div style="height: 10px;">
+            </div>
         </div>
     </div>
 </template>
 
-<script lang="ts">
+<script>
 import MyList from '@/components/MyList.vue';
 
 export default{
@@ -147,7 +162,7 @@ export default{
             ],
             eleList: [
                 {
-                    goodsId: 1,
+                    goodsId: 10,
                     imgUrl: "//cdn.cnbj1.fds.api.mi-img.com/mi-mall/82ff5ea76730fdf6f91aba5d3b2e5739.jpg?thumb=1&w=200&h=200&f=webp&q=90",
                     title: "小米电视6 65” OLED",
                     desc: "OLED自发光屏 | 百万级对比度 | 4.6mm超薄全面屏",
@@ -155,7 +170,8 @@ export default{
                     oldPrice: "6999",
                     isDiscount: true
                 },
-            ]
+            ],
+            leftNav: ["手机","电视","家电","笔记本 平板","出行 穿戴","耳机 音箱","健康 儿童","生活 箱包","智能 路由器","电源 配件"]
         };
     },
     components: { MyList }
@@ -164,4 +180,9 @@ export default{
 
 <style>
 @import "../assets/css/index.css";
+
+.goods-list-box .goods-list{
+    width: 993px;
+    height: 614px;
+}
 </style>

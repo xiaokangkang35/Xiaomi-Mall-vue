@@ -24,6 +24,28 @@
     color: #fff;
     background: rgba(105,101,101);
 }
+.left_nav_bar ul li{
+    position: relative;
+    color: #fff;
+    padding-left: 30px;
+    height: 42px;
+    line-height: 42px;
+    font-size: 14px;
+}
+.left_nav_bar ul li:hover{
+    background-color: #ff6700;
+}
+.left_nav_bar ul li a{
+    color: #fff;
+}
+.left_nav_bar ul li i{
+    position: absolute;
+    top: 12px;
+    right: 20px;
+    font-size: 16px;
+    line-height: 16px;
+    color: #e0e0e0;
+}
 .home_sub{
     margin-bottom: 26px;
 }
@@ -84,7 +106,10 @@
     height: 58px;
     margin: 20px 0 0 0;
 }
- .box_goods{
+.box_header>.title{
+    text-align: left;
+}
+.box_goods{
     height: 614px;
 }
 .box_goods .img_list{

@@ -10,13 +10,15 @@
 import TopBar from '@/components/TopBar'
 import TopMenu from '@/components/TopMenu'
 import MyList from '@/components/MyList'
+import BottomBar from '@/components/BottomBar'
 
 export default {
   name: 'App',
   components: {
     TopBar,
     TopMenu,
-    MyList
+    MyList,
+    BottomBar
   }
 }
 </script>

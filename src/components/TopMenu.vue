@@ -9,8 +9,8 @@
             </router-link>
         </div>
         <el-menu-item index="/">首页</el-menu-item>
-        <el-menu-item index="/test">全部商品</el-menu-item>
-        <el-menu-item index="/service">服务中心‘</el-menu-item>
+        <el-menu-item index="/goods">全部商品</el-menu-item>
+        <el-menu-item index="/service">服务中心</el-menu-item>
 
         <div class="search">
             <el-input placeholder="请输入搜索内容">
