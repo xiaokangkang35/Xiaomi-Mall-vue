@@ -1,6 +1,4 @@
-.el-carousel__arrow--left{
-    left: 250px;
-}
+
 .carousel{
     width: 1226px;
     margin: 0 auto;
@@ -103,11 +101,31 @@
 }
 
 .box_header{
+    position: relative;
     height: 58px;
     margin: 20px 0 0 0;
 }
 .box_header>.title{
     text-align: left;
+    font-size: 22px;
+    font-weight: 200;
+    line-height: 58px;
+    color: #333;
+}
+.box_header .more{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    height: 58px;
+    line-height: 58px;
+}
+.box_header .more span{
+    font-size: 16px;
+    margin: 0 0 0 30px;
+}
+.more-text{
+    color: #ff6700;
+    border-bottom: 2px solid #ff6700;
 }
 .box_goods{
     height: 614px;

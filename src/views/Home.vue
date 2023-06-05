@@ -4,7 +4,7 @@
             <div style="margin-bottom: 20px;">
                 <!-- 轮播图 -->
                 <div class="carousel">
-                    <el-carousel :interval="3000" height="460px" trigger="click">
+                    <el-carousel class="zzz" :interval="3000" height="460px" trigger="click">
                         <el-carousel-item v-for="(item,index) in carousel" :key="index">
                             <img :src="item" alt="">
                         </el-carousel-item>
@@ -105,7 +105,7 @@ import Vue from 'vue';
 
 export default{
     data() {
-        const phoneList = Vue.prototype.GLOBAL.goodsList.filter(item => item.goodsId >= 1 && item.goodsId <= 7);
+        const phoneList = Vue.prototype.GLOBAL.goodsList.filter(item => item.goodsId >= 1 && item.goodsId <= 8);
         const eleList = Vue.prototype.GLOBAL.goodsList.filter(item => item.goodsId >= 10 && item.goodsId <= 16);
         return {
             carousel: Vue.prototype.GLOBAL.carousel,
@@ -125,5 +125,8 @@ export default{
 .goods-list-box .goods-list{
     width: 993px;
     height: 614px;
+}
+.zzz .el-carousel__arrow--left{
+    left: 250px;
 }
 </style>

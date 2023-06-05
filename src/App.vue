@@ -3,6 +3,7 @@
         <top-bar></top-bar>
         <top-menu></top-menu>
         <router-view></router-view>
+        <bottom-bar></bottom-bar>
   </div>
 </template>
 
