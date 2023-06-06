@@ -41,7 +41,7 @@
 
                 </div>
                 <div class="button">
-                    <el-button type="shop-cart">加入购物车</el-button>
+                    <el-button type="shop-cart" @click="addShopping(goodsId)">加入购物车</el-button>
                 </div>
             </div>
         </div>
@@ -59,7 +59,19 @@ export default{
             goodsId : goods_Id,
             goodsDetails: goodsDetails
         }
-    },   
+    },  
+    methods:{
+        addShopping(value) {
+            if (Vue.prototype.GLOBAL.idList.includes(value)) {
+                this.$router.push({path: "/shopping"})
+            } else {
+                Vue.prototype.GLOBAL.idList.push(value)
+                this.$router.push({path: "/shopping"})
+            }
+            console.log(Vue.prototype.GLOBAL.idList)
+            console.log(value)
+        }
+    },
 }
 </script>
 
