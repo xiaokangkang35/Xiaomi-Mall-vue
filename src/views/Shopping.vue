@@ -47,6 +47,18 @@
                     </div>
                 </div>
             </div>
+            <div class="cart-bar">
+                <div class="section-left">
+                    <router-link to="/">继续购物</router-link>
+                    <span class="total">已选择</span>
+                </div>
+                <div class="section-right">
+                    合计:
+                    <em style="font-style: normal;font-size: 30px;">{{ allPrice }}</em>
+                    元
+                    <el-button style="height: 50px; width: 200px; margin-left: 50px;padding-top: 16px;" type="">去结算</el-button>
+                </div>
+            </div>
         </div>
     </div>
 </template>
@@ -57,7 +69,8 @@ export default{
     data() {
         return {
             isAllCheck: false,
-            foundObjects: []
+            foundObjects: [],
+            allPrice: 0
         }
     },
     methods: {
@@ -177,5 +190,28 @@ export default{
 .goods-action{
     width: 50px;
     text-align: center;
+}
+.cart-bar{
+    height: 50px;
+    margin: 20px 0;
+    background-color: #fff;
+}
+.cart-bar .section-left{
+    float: left;
+    height: 50px;
+    line-height: 50px;
+}
+.cart-bar .section-left a{
+    margin-left: 32px;
+    color: #757575;
+}
+.cart-bar .section-left .total{
+    margin-left: 16px;
+    padding-left: 16px;
+    border-left: 1px solid #eee;
+    color: #757575;
+}
+.cart-bar .section-right{
+    float: right;
 }
 </style>

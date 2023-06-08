@@ -35,7 +35,7 @@ const goodsList = [
             intro: "双生双色设计 | 前置仿生双主摄 | 原生质感人像 | 超轻薄好手感 | 天玑8200-Ultra高性能处理器 | 4500mAh大电池",
             price: "2499",
             detailsImg: ["https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1684926185.82863087.png"],
-            shoppingImg: "",
+            shoppingImg: "https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202305241112_92d754199d7792647ad2ea3b8263e645.png?thumb=1&w=80&h=80&f=webp&q=90",
             isDiscount: false,
             num: 1,
         },
@@ -101,7 +101,13 @@ const goodsList = [
             intro: "第二代骁龙8丨2K 高光屏丨VC 液冷散热丨索尼IMX800 大底相机+小米影像大脑2.0丨OIS光学防抖丨120W神仙秒充+30W无线秒充丨5000mAh大电量丨屏下指纹解锁",
             price: "2899",
             oldPrice: "3599",
-            detailsImg: [],
+            detailsImg: [
+                "https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1672216280.71952812.png",
+                "https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1672216278.38828336.png",
+                "https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1672038534.61663494.png",
+                "https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1672038534.59644168.png",
+                "https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1672216280.71952812.png"
+            ],
             shoppingImg: "",
             isDiscount: true,
             num: 1,
@@ -114,7 +120,11 @@ const goodsList = [
             intro: "Redmi Note 12 Pro 极速版",
             price: "1499",
             oldPrice: "1699",
-            detailsImg: [],
+            detailsImg: [
+                "https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1672039203.85264964.png",
+                "https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1672039203.85771220.png",
+                "https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1672039203.83071726.png"
+            ],
             shoppingImg: "",
             isDiscount: true,
             num: 1,
@@ -126,7 +136,11 @@ const goodsList = [
             desc: "全新第二代骁龙8｜徕卡专业光学镜头｜徕卡原生双画质 | 6.36″超窄边屏幕｜67W小米澎湃秒充｜徕卡75mm长焦镜头",
             intro: "第二代骁龙8｜徕卡专业光学镜头｜徕卡原生双画质｜徕卡75mm长焦 | 超窄边屏幕｜67W澎湃秒充",
             price: "1499",
-            detailsImg: [],
+            detailsImg: [
+                "https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1683256390.59445920.png",
+                "https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1683252896.92117149.png",
+                "https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1683252896.88634620.png"
+            ],
             shoppingImg: "",
             isDiscount: false,
             num: 1,
