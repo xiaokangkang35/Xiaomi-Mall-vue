@@ -19,7 +19,7 @@ export default {
     TopBar,
     TopMenu,
     MyList,
-    BottomBar
+    BottomBar,
   }
 }
 </script>

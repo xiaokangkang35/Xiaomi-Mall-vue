@@ -5,7 +5,7 @@
                 <div class="cart-goods-list">
                     <div class="list-head">
                         <div class="col-check">
-                            <el-checkbox v-model="isAllCheck">全选</el-checkbox>
+                            <el-checkbox :indeterminate="isIndeterminate" v-model="isCheckAll" @change="CheckAllChange">全选</el-checkbox>
                         </div>
                         <div class="col-img">&nbsp;</div>
                         <div class="col-name">商品名称</div>
@@ -20,7 +20,7 @@
                                 <ul>
                                     <li v-for="(item,index) in foundObjects" :key="item.goodsId">
                                         <div class="goods-check">
-                                            <el-checkbox :value="item.check" @change="checkChange($event,index)"></el-checkbox>
+                                            <el-checkbox :value="item.check" @change="CheckChange(index)"></el-checkbox>
                                         </div>
                                         <div class="goods-img">
                                             <img :src="item.shoppingImg" alt="">
@@ -63,36 +63,44 @@
     </div>
 </template>
 <script>
-import Vue from 'vue'
+import Vue from 'vue';
 
 export default{
     data() {
         return {
-            isAllCheck: false,
+            isCheckAll: false,
             foundObjects: [],
-            allPrice: 0
+            allPrice: 0,
+            isIndeterminate: true,
+            checkGoods: []
         }
     },
     methods: {
       handleChange(value) {
-        console.log(value);
+        
       },
       del(item){
         console.log(item)
         var ind = this.foundObjects.findIndex(value => value.id === item);
         this.foundObjects.splice(ind, 1)
       },
-      
+      CheckAllChange(value) {
+        console.log(value);
+        this.isIndeterminate = false;
+      },
+      CheckChange(a) {
+        console.log(a)
+      }
     },
     computed: {
         foundGoods() {
             const idList = Vue.prototype.GLOBAL.idList;
             return Vue.prototype.GLOBAL.goodsList.filter(obj => idList.includes(obj.goodsId))
-        }
+        },
     },
     created(){
         this.foundObjects = this.foundGoods
-    }
+    },
 }
 </script>
 <style>
