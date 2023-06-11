@@ -59,7 +59,7 @@ export default{
             goodsId : goods_Id,
             goodsDetails: goodsDetails
         }
-    },  
+    }, 
     methods:{
         addShopping(value) {
             if (Vue.prototype.GLOBAL.idList.includes(value)) {
@@ -116,6 +116,7 @@ export default{
     height: 560px;
     padding-top: 30px;
     margin: 0 auto;
+    border-bottom: 1px solid #e0e0e0;
 }
 #details .page-main .img{
     float: left;

@@ -13,12 +13,66 @@
         <el-menu-item index="/shopping">购物车</el-menu-item>
 
         <div class="search">
-            <el-input placeholder="请输入搜索内容">
-              <el-button slot="append" icon="el-icon-search"></el-button>
+            <el-input placeholder="请输入搜索内容" v-model="searchText">
+              <el-button slot="append" icon="el-icon-search" @click="handleSearch"></el-button>
             </el-input>
           </div>
     </el-menu>
 </template>
+<script>
+import Vue from 'vue';
+export default{
+  data() {
+      return {
+          activeIndex: '/',
+          searchText: '',
+          goods: Vue.prototype.GLOBAL.goodsList
+      }
+  },
+  methods: {
+    handleSearch() {
+      console.log(this.searchText);
+      const keyword = this.searchText.trim();
+      if (keyword === '') {
+        console.log('请输入搜索关键字');
+        return;
+      }
+      const foundGoods = this.goods.filter((item) =>
+        item.title.includes(keyword)
+      );
+      console.log(foundGoods);
+      this.searchText = '';
+
+      const routeData = {
+        path: '/search',
+        query: {
+          foundGoods: JSON.stringify(foundGoods),
+        },
+      };
+
+      try {
+        // 检查当前路由是否与目标路由相同
+        if (
+          this.$route.path === routeData.path &&
+          JSON.stringify(this.$route.query) === JSON.stringify(routeData.query)
+        ) {
+          throw new Error('重复导航');
+        }
+
+        this.$router.push(routeData);
+      } catch (error) {
+        console.error(error);
+      }
+    },
+  },
+  created() {
+    this.$watch('$route.path', (newPath, oldPath) => {
+      this.activeIndex = newPath;
+    });
+  },
+  
+}
+</script>
 <style>
 .el-menu {
   max-width: 1225px;
@@ -36,17 +90,3 @@
   float: right;
 }
 </style>
-<script>
-    export default{
-      created() {
-        this.$watch('$route.path', (newPath, oldPath) => {
-          this.activeIndex = newPath;
-        });
-      },
-        data() {
-            return {
-                activeIndex: '/'
-            }
-        }
-    }
-</script>

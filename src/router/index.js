@@ -12,7 +12,7 @@ const routes = [
   {
     path: '/goods',
     name: 'Goods',
-    component: () => import('../views/Goods.vue')
+    component: () => import('../views/Goods.vue'),
   },
   {
     path: '/shopping',
@@ -20,9 +20,14 @@ const routes = [
     component: () => import('../views/Shopping.vue')
   },
   {
-    path: '/goods/details',
+    path: '/details',
     name: 'Details',
     component: () => import('../views/Details.vue')
+  },
+  {
+    path: '/search',
+    name: 'Search',
+    component: () => import('../views/Search.vue')
   }
 ]
 

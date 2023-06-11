@@ -26,6 +26,11 @@ export default{
   props:{
     idList: [],
   },
+  methods: {
+    login() {
+
+    }
+  }
 }
 </script>
 <style>

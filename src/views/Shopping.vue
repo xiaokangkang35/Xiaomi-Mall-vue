@@ -71,7 +71,6 @@ export default{
             isCheckAll: false,
             foundObjects: [],
             isIndeterminate: false,
-            checkGoods: []
         }
     },
     methods: {
@@ -98,6 +97,10 @@ export default{
             const selectedCount = this.foundObjects.filter(item => item.check).length;
             this.isCheckAll = selectedCount === this.foundObjects.length;
             this.isIndeterminate = selectedCount > 0 && selectedCount < this.foundObjects.length;
+            if (this.foundObjects.length === 0) {
+                this.isCheckAll = false;
+                this.isIndeterminate = false;
+            }
         },
     },
     computed: {

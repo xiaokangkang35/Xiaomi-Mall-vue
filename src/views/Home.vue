@@ -93,7 +93,7 @@
                     </div>
                 </div>
             </div>
-            <div style="height: 10px;">
+            <div style="height: 22px;">
             </div>
         </div>
     </div>

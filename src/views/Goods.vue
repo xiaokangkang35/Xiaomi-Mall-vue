@@ -3,9 +3,8 @@
         <div class="goods-box">
             <div class="bread-crumb">
                 <el-breadcrumb separator=">">
-                    
                     <el-breadcrumb-item><router-link to="/">首页</router-link></el-breadcrumb-item>
-                    <el-breadcrumb-item>全部商品</el-breadcrumb-item>
+                    <el-breadcrumb-item><router-link to="/goods">全部商品</router-link></el-breadcrumb-item>
                 </el-breadcrumb>
             </div>
             <div class="goods-list">
