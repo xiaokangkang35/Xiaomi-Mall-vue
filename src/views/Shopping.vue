@@ -50,11 +50,11 @@
             <div class="cart-bar">
                 <div class="section-left">
                     <router-link to="/">继续购物</router-link>
-                    <span class="total">已选择</span>
+                    <span class="total">已选择 {{ selectedCheckboxCount }} 件</span>
                 </div>
                 <div class="section-right">
                     合计:
-                    <em style="font-style: normal;font-size: 30px;">{{ allPrice }}</em>
+                    <em style="font-style: normal;font-size: 30px;">{{ selectedTotalPrice }}</em>
                     元
                     <el-button style="height: 50px; width: 200px; margin-left: 50px;padding-top: 16px;" type="">去结算</el-button>
                 </div>
@@ -70,36 +70,62 @@ export default{
         return {
             isCheckAll: false,
             foundObjects: [],
-            allPrice: 0,
-            isIndeterminate: true,
+            isIndeterminate: false,
             checkGoods: []
         }
     },
     methods: {
-      handleChange(value) {
-        
-      },
-      del(item){
-        console.log(item)
-        var ind = this.foundObjects.findIndex(value => value.id === item);
-        this.foundObjects.splice(ind, 1)
-      },
-      CheckAllChange(value) {
-        console.log(value);
-        this.isIndeterminate = false;
-      },
-      CheckChange(a) {
-        console.log(a)
-      }
+        handleChange(value) {
+            
+        },
+        del(item){
+            var ind = this.foundObjects.findIndex(value => value.id === item);
+            this.foundObjects.splice(ind, 1)
+        },
+        CheckAllChange() {
+            const checked = this.isCheckAll;
+            this.foundObjects.forEach(item => {
+            item.check = checked;
+            });
+            this.updateCheckAllStatus();
+        },
+        CheckChange(index) {
+            const currentItem = this.foundObjects[index];
+            currentItem.check = !currentItem.check;
+            this.updateCheckAllStatus();
+        },
+        updateCheckAllStatus() {
+            const selectedCount = this.foundObjects.filter(item => item.check).length;
+            this.isCheckAll = selectedCount === this.foundObjects.length;
+            this.isIndeterminate = selectedCount > 0 && selectedCount < this.foundObjects.length;
+        },
     },
     computed: {
         foundGoods() {
             const idList = Vue.prototype.GLOBAL.idList;
-            return Vue.prototype.GLOBAL.goodsList.filter(obj => idList.includes(obj.goodsId))
+            return Vue.prototype.GLOBAL.goodsList.filter(obj => idList.includes(obj.goodsId));
+        },
+        selectedTotalPrice() {
+            return this.foundGoods.reduce((total, item) => {
+            if (item.check) {
+                return total + item.price * item.num;
+            }
+            return total;
+            }, 0);
+        },
+        selectedCheckboxCount() {
+            const length = this.foundGoods.filter(item => item.check).length;
+            return length;
         },
     },
     created(){
         this.foundObjects = this.foundGoods
+    },
+    watch: {
+        foundObjects: {
+            handler: 'updateCheckAllStatus',
+            deep: true
+        }
     },
 }
 </script>

@@ -38,9 +38,11 @@
 </style>
 <script>
     export default{
-        beforeUpdate() {
-            this.activeIndex = this.$route.path
-        },
+      created() {
+        this.$watch('$route.path', (newPath, oldPath) => {
+          this.activeIndex = newPath;
+        });
+      },
         data() {
             return {
                 activeIndex: '/'

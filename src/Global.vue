@@ -26,6 +26,7 @@ const goodsList = [
             shoppingImg: "https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202305291422_e96776c7e1e35cebb454457c3344d3cd.png?thumb=1&w=80&h=80&f=webp&q=90",
             isDiscount: false,
             num: 1,
+            check: true
         },
         {
             goodsId: "2",
@@ -38,6 +39,7 @@ const goodsList = [
             shoppingImg: "https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202305241112_92d754199d7792647ad2ea3b8263e645.png?thumb=1&w=80&h=80&f=webp&q=90",
             isDiscount: false,
             num: 1,
+            check: true
         },
         {
             goodsId: "3",
@@ -55,6 +57,7 @@ const goodsList = [
             shoppingImg: "",
             isDiscount: false,
             num: 1,
+            check: true
         },
         {
             goodsId: "4",
@@ -73,6 +76,7 @@ const goodsList = [
             shoppingImg: "",
             isDiscount: true,
             num: 1,
+            check: true
         },
         {
             goodsId: "5",
@@ -92,6 +96,7 @@ const goodsList = [
             shoppingImg: "",
             isDiscount: true,
             num: 1,
+            check: true
         },
         {
             goodsId: "6",
@@ -111,6 +116,7 @@ const goodsList = [
             shoppingImg: "",
             isDiscount: true,
             num: 1,
+            check: true
         },
         {
             goodsId: "7",
@@ -128,6 +134,7 @@ const goodsList = [
             shoppingImg: "",
             isDiscount: true,
             num: 1,
+            check: true
         },
         {
             goodsId: "8",
@@ -144,6 +151,7 @@ const goodsList = [
             shoppingImg: "",
             isDiscount: false,
             num: 1,
+            check: true
         },
         {
             goodsId: "10",
@@ -157,6 +165,7 @@ const goodsList = [
             shoppingImg: "",
             isDiscount: true,
             num: 1,
+            check: true
         },
         {
             goodsId: "11",
@@ -170,6 +179,7 @@ const goodsList = [
             shoppingImg: "",
             isDiscount: true,
             num: 1,
+            check: true
         },
         {
             goodsId: "12",
@@ -183,6 +193,7 @@ const goodsList = [
             shoppingImg: "",
             isDiscount: true,
             num: 1,
+            check: true
         },
         {
             goodsId: "13",
@@ -196,6 +207,7 @@ const goodsList = [
             shoppingImg: "",
             isDiscount: true,
             num: 1,
+            check: true
         },
         {
             goodsId: "14",
@@ -209,14 +221,17 @@ const goodsList = [
             shoppingImg: "",
             isDiscount: true,
             num: 1,
+            check: true
         },
     ];
 var idList = [];
+var goodsLength = 0;
 
 export default{
     carousel,
     threeImg,
     goodsList,
-    idList
+    idList,
+    goodsLength
 }
 </script>

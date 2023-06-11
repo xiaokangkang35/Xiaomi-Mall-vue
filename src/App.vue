@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-        <top-bar></top-bar>
+        <top-bar :idList="idList"></top-bar>
         <top-menu></top-menu>
         <router-view></router-view>
         <bottom-bar></bottom-bar>
@@ -12,9 +12,15 @@ import TopBar from '@/components/TopBar'
 import TopMenu from '@/components/TopMenu'
 import MyList from '@/components/MyList'
 import BottomBar from '@/components/BottomBar'
+import Vue from 'vue'
 
 export default {
   name: 'App',
+  data() {
+    return {
+      idList: Vue.prototype.GLOBAL.idList
+    }
+  },
   components: {
     TopBar,
     TopMenu,

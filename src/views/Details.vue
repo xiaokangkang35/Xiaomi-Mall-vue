@@ -68,8 +68,7 @@ export default{
                 Vue.prototype.GLOBAL.idList.push(value)
                 this.$router.push({path: "/shopping"})
             }
-            console.log(Vue.prototype.GLOBAL.idList)
-            console.log(value)
+            console.log(Vue.prototype.GLOBAL.idList.length)
         }
     },
 }

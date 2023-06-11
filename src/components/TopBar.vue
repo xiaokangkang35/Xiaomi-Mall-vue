@@ -12,16 +12,22 @@
                     <router-link to="">消息通知</router-link>
                 </li>
                 <li class="shopCart">
-                    <router-link to="">
+                    <router-link to="/shopping">
                         <i class="el-icon-shopping-cart-2"> </i>  购物车
-                        <span>(0)</span>
+                        <span>({{ idList.length }})</span>
                     </router-link>
                 </li>
             </ul>
         </div>
     </div>
 </template>
-
+<script>
+export default{
+  props:{
+    idList: [],
+  },
+}
+</script>
 <style>
 .topBar {
   height: 40px;
