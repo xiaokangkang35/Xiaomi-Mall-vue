@@ -54,7 +54,7 @@ const goodsList = [
                 "https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1681805071.89555963.png",
                 "https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1681805074.57094989.png"
             ],
-            shoppingImg: "",
+            shoppingImg: "https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202304171458_929aed0b26d157da33d1cf039837b569.png?thumb=1&w=80&h=80&f=webp&q=90",
             isDiscount: false,
             num: 1,
             check: true
@@ -73,7 +73,7 @@ const goodsList = [
                 "https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1679982565.1181124.png",
                 "https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1679982565.11927388.png"
             ],
-            shoppingImg: "",
+            shoppingImg: "https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202303281313_5532d563369d4f1faa1d83ece754885a.png?thumb=1&w=80&h=80&f=webp&q=90",
             isDiscount: true,
             num: 1,
             check: true
@@ -93,7 +93,7 @@ const goodsList = [
                 "https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1672037270.59315167.png",
                 "https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1672037270.61465433.png"
             ],
-            shoppingImg: "",
+            shoppingImg: "https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202212261427_48f2842720deb0f7cbb9170b801adab4.png?thumb=1&w=80&h=80&f=webp&q=90",
             isDiscount: true,
             num: 1,
             check: true
@@ -113,7 +113,7 @@ const goodsList = [
                 "https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1672038534.59644168.png",
                 "https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1672216280.71952812.png"
             ],
-            shoppingImg: "",
+            shoppingImg: "https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202212261455_f37dd30477e7ba040c7fb69c31ad8bf3.png?thumb=1&w=80&h=80&f=webp&q=90",
             isDiscount: true,
             num: 1,
             check: true
@@ -131,7 +131,7 @@ const goodsList = [
                 "https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1672039203.85771220.png",
                 "https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1672039203.83071726.png"
             ],
-            shoppingImg: "",
+            shoppingImg: "https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202212261018_0724441516a1608696413107bcf58253.png?thumb=1&w=80&h=80&f=webp&q=90",
             isDiscount: true,
             num: 1,
             check: true
@@ -148,7 +148,7 @@ const goodsList = [
                 "https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1683252896.92117149.png",
                 "https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1683252896.88634620.png"
             ],
-            shoppingImg: "",
+            shoppingImg: "https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202305041114_dfba57d068ddd4f6b75ae47cb61a16a2.png?thumb=1&w=80&h=80&f=webp&q=90",
             isDiscount: false,
             num: 1,
             check: true

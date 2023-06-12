@@ -40,16 +40,13 @@ export default{
       const foundGoods = this.goods.filter((item) =>
         item.title.includes(keyword)
       );
-      console.log(foundGoods);
       this.searchText = '';
-
       const routeData = {
         path: '/search',
         query: {
           foundGoods: JSON.stringify(foundGoods),
         },
       };
-
       try {
         // 检查当前路由是否与目标路由相同
         if (
@@ -58,7 +55,6 @@ export default{
         ) {
           throw new Error('重复导航');
         }
-
         this.$router.push(routeData);
       } catch (error) {
         console.error(error);
