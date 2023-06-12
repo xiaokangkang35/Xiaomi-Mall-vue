@@ -1,9 +1,6 @@
 <template>
-  <div id="app">
-        <top-bar :idList="idList"></top-bar>
-        <top-menu></top-menu>
+  <div id="app" style="height: 100%;">
         <router-view></router-view>
-        <bottom-bar></bottom-bar>
   </div>
 </template>
 

@@ -1,4 +1,5 @@
 <template>
+    
     <div style="position: relative;">
         <div style="width: 1226px; margin: 0 auto;">
             <div style="margin-bottom: 20px;">
@@ -97,6 +98,7 @@
             </div>
         </div>
     </div>
+    
 </template>
 
 <script>
