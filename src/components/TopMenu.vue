@@ -8,7 +8,7 @@
                 <img src="../assets/images/logo/mi-logo.png" />
             </router-link>
         </div>
-        <el-menu-item index="/">首页</el-menu-item>
+        <el-menu-item index="/home">首页</el-menu-item>
         <el-menu-item index="/goods">全部商品</el-menu-item>
         <el-menu-item index="/shopping">购物车</el-menu-item>
 
@@ -24,7 +24,7 @@ import Vue from 'vue';
 export default{
   data() {
       return {
-          activeIndex: '/',
+          activeIndex: '/home',
           searchText: '',
           goods: Vue.prototype.GLOBAL.goodsList
       }

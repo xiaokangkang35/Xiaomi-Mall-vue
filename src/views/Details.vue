@@ -63,12 +63,12 @@ export default{
     methods:{
         addShopping(value) {
             if (Vue.prototype.GLOBAL.idList.includes(value)) {
-                this.$router.push({path: "/shopping"})
+                this.$router.push({ path: "/shopping" });
             } else {
-                Vue.prototype.GLOBAL.idList.push(value)
-                this.$router.push({path: "/shopping"})
+                Vue.prototype.GLOBAL.idList.push(value);
+                this.$router.push({ path: "/shopping" });
             }
-            console.log(Vue.prototype.GLOBAL.idList.length)
+            console.log(Vue.prototype.GLOBAL.idList)
         }
     },
 }

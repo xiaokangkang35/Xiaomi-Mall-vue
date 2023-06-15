@@ -18,7 +18,7 @@
                         <div class="list-item">
                             <div class="item-box">
                                 <ul>
-                                    <li v-for="(item,index) in foundObjects" :key="item.goodsId">
+                                    <li v-for="(item,index) in foundGoods" :key="item.goodsId">
                                         <div class="goods-check">
                                             <el-checkbox :value="item.check" @change="CheckChange(index)"></el-checkbox>
                                         </div>
@@ -71,15 +71,22 @@ export default{
             isCheckAll: false,
             foundObjects: [],
             isIndeterminate: false,
+            idList : Vue.prototype.GLOBAL.idList
         }
     },
     methods: {
         handleChange(value) {
             
         },
-        del(item){
-            var ind = this.foundObjects.findIndex(value => value.id === item);
-            this.foundObjects.splice(ind, 1)
+        del(value){
+            console.log(value);
+            const idList = Vue.prototype.GLOBAL.idList;
+            const index1 = idList.indexOf(value);
+            if(index1 !== -1){
+                idList.splice(index1, 1)
+            }
+            console.log(this.foundObjects)
+            
         },
         CheckAllChange() {
             const checked = this.isCheckAll;
@@ -101,12 +108,15 @@ export default{
                 this.isCheckAll = false;
                 this.isIndeterminate = false;
             }
-        },
+        }
     },
     computed: {
         foundGoods() {
-            const idList = Vue.prototype.GLOBAL.idList;
-            return Vue.prototype.GLOBAL.goodsList.filter(obj => idList.includes(obj.goodsId));
+            const idList = this.idList;
+            const goodsList = Vue.prototype.GLOBAL.goodsList;
+            return idList.map(item => {
+                return goodsList.find(obj => obj.goodsId === item)
+            })
         },
         selectedTotalPrice() {
             return this.foundGoods.reduce((total, item) => {
@@ -120,6 +130,7 @@ export default{
             const length = this.foundGoods.filter(item => item.check).length;
             return length;
         },
+        
     },
     created(){
         this.foundObjects = this.foundGoods
