@@ -51,7 +51,7 @@ html,body{
     width: 375px;
     height: 100%;
     background-image: url("https://cdn.web-global.fds.api.mi-img.com/mcfe--mi-account/static/static/media/banner.92c693b4..jpg");
-    background-size: contain;
+    background-size: cover;
 }
 .login-box .login-main{
     height: 100%;

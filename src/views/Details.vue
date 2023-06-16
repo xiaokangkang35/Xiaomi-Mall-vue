@@ -32,8 +32,8 @@
                 <p class="store">小米自营</p>
                 <div class="price-info">
                     <span>{{ goodsDetails[0].price }}元</span>
-                    <del style="color: #b0b0b0;" v-if="goodsDetails[0].isDiscount">
-                        <span class="old-price">{{ goodsDetails[0].oldPrice }}元</span>
+                    <del class="old-price" v-if="goodsDetails[0].isDiscount">
+                        <span >{{ goodsDetails[0].oldPrice }}元</span>
                     </del>
                 </div>
                 <div class="line"></div>
@@ -68,7 +68,6 @@ export default{
                 Vue.prototype.GLOBAL.idList.push(value);
                 this.$router.push({ path: "/shopping" });
             }
-            console.log(Vue.prototype.GLOBAL.idList)
         }
     },
 }

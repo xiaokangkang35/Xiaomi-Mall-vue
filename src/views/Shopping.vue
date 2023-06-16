@@ -79,24 +79,25 @@ export default{
             
         },
         del(value){
-            console.log(value);
             const idList = Vue.prototype.GLOBAL.idList;
             const index1 = idList.indexOf(value);
             if(index1 !== -1){
                 idList.splice(index1, 1)
             }
-            console.log(this.foundObjects)
-            
+            this.$notify({
+                title: '成功删除',
+                message: '已成功移除商品！'
+            })
         },
         CheckAllChange() {
             const checked = this.isCheckAll;
             this.foundObjects.forEach(item => {
-            item.check = checked;
+                item.check = checked;
             });
             this.updateCheckAllStatus();
         },
         CheckChange(index) {
-            const currentItem = this.foundObjects[index];
+            const currentItem = this.foundGoods[index];
             currentItem.check = !currentItem.check;
             this.updateCheckAllStatus();
         },
