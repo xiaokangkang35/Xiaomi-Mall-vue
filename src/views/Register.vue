@@ -1,26 +1,26 @@
 <template>
     <div class="container">
             <div class="login-wrapper">
-                <div class="header">Login</div>
+                <div class="header">Register</div>
                 <div class="form-wrapper">
-                    <input type="text" name="username" placeholder="username" class="input-item">
-                    <input type="password" name="password" placeholder="password" class="input-item">
+                    <input type="text" name="username" placeholder="账户" class="input-item">
+                    <input type="password" name="password" placeholder="密码" class="input-item">
+                    <input type="password" name="repassword" placeholder="再次确认密码" class="input-item">
                     <div class="btn">
-                        <router-link to="/home" style="color: #fff;">Login</router-link>
+                        <router-link to="/login" style="color: #fff;">Register</router-link>
                     </div>
                 </div>
             </div>
         </div>
 </template>
- 
+    
 <script>
     export default {
-        name:"Login"
+        name:"Reg"
     }
 </script>
  
 <style scoped>
- 
 html {
     height: 100%;
 }
@@ -66,11 +66,11 @@ body {
 .btn {
     text-align: center;
     padding: 10px;
-    margin: 0 auto;
     width: 100%;
     margin-top: 40px;
     background-image: linear-gradient(to right, #a6c1ee, #fbc2eb);
     color: #fff;
+    margin: 0 auto;
 }
 .msg {
     text-align: center;

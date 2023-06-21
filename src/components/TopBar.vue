@@ -6,7 +6,7 @@
                 <li>
                     <el-button type="text"><router-link to="/login">登录</router-link></el-button>
                     <span class="sep">|</span>
-                    <el-button type="text">注册</el-button>
+                    <el-button type="text"><router-link to="/register">注册</router-link></el-button>
                 </li>
                 <li>
                     <router-link to="">消息通知</router-link>
