@@ -3,10 +3,10 @@
             <div class="login-wrapper">
                 <div class="header">Login</div>
                 <div class="form-wrapper">
-                    <input type="text" name="username" placeholder="username" class="input-item">
-                    <input type="password" name="password" placeholder="password" class="input-item">
-                    <div class="btn">
-                        <router-link to="/home" style="color: #fff;">Login</router-link>
+                    <el-input v-model="username" placeholder="username" @input="handleUsernameInput"></el-input>
+                    <el-input v-model="password" placeholder="password" @input="handlePasswordInput" show-password style="margin-top: 40px;"></el-input>
+                    <div class="btn" @click="loginBtn">
+                        Login
                     </div>
                 </div>
             </div>
@@ -14,9 +14,46 @@
 </template>
  
 <script>
-    export default {
-        name:"Login"
+import { debounce, throttle } from 'lodash';
+export default{
+    name:"Login",
+    data() {
+        return {
+            username: '',
+            password: '',
+            state1 : false,
+            state2 : false,
+        }
+    },
+    methods: {
+        handleUsernameInput: debounce(function () {
+            console.log('Username changed:', this.username);
+            if (this.username === 'zikang') {
+                this.state1 = true
+                console.log(this.state1)
+            }
+        }, 1000),
+        handlePasswordInput: debounce(function () {
+            console.log('Password changed:', this.password);
+            if (this.password === '123456') {
+                this.state2 = true
+                console.log(this.state2)
+            }
+        }, 1000),
+
+        loginBtn() {
+            if (this.state1 == true && this.state2 ==true) {
+                this.$router.push({path: '/home'})
+            } else {
+                this.$message({
+                    showClose: true,    
+                    message: '账号或密码错误'
+                });
+            }
+        }
+
     }
+}
 </script>
  
 <style scoped>
