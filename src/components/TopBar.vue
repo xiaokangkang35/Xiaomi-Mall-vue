@@ -33,7 +33,7 @@ export default{
   }
 }
 </script>
-<style>
+<style scoped>
 .topBar {
   height: 40px;
   background-color: #3d3d3d;

@@ -5,9 +5,7 @@
                 <div class="form-wrapper">
                     <el-input v-model="username" placeholder="username" @input="handleUsernameInput"></el-input>
                     <el-input v-model="password" placeholder="password" @input="handlePasswordInput" show-password style="margin-top: 40px;"></el-input>
-                    <div class="btn" @click="loginBtn">
-                        Login
-                    </div>
+                    <div class="btn" @click="loginBtn">Login</div>
                 </div>
             </div>
         </div>

@@ -144,7 +144,7 @@ export default{
     },
 }
 </script>
-<style>
+<style scoped>
 .shopping-main{
     padding: 38px 0;
     background: #f5f5f5;
