@@ -1,5 +1,7 @@
 # mi-shop
 
+## 这是关于使用 Vue 完成对于小米商城的仿造
+
 ## Project setup
 ```
 npm install
